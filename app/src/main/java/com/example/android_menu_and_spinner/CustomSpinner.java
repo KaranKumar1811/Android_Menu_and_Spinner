@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class CustomSpinner extends AppCompatActivity {
+public class CustomSpinner extends AppCompatActivity  {
 
 
 
@@ -31,7 +31,8 @@ public class CustomSpinner extends AppCompatActivity {
 
         //  countryList= (ArrayList<String>) Arrays.asList(getResources().getStringArray(R.array.array_country));
         countries=getResources().getStringArray(R.array.array_country);
-
+        CustomAdapter customAdapter=new CustomAdapter(getApplicationContext(),flags,countries);
+        spinnerView.setAdapter(customAdapter);
 //       ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_custom_spinner,R.id.countrtlst,flags.toString(),countries);
 //        spinnerView.setAdapter(stringArrayAdapter);
 //

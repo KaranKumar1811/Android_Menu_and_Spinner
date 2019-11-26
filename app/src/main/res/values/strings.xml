@@ -3,14 +3,15 @@
     <array name="array_country">
         <item>India</item>
         <item>Canada</item>
-        <item>USA</item>
+
         <item>Pakistan</item>
-        <item>Russia</item>
-        <item>UAE</item>
-        <item>France</item>
-        <item>Bhutan</item>
-        <item>Jamica</item>
-        <item>Kenya</item>
+<!--        <item>USA</item>-->
+<!--        <item>Russia</item>-->
+<!--        <item>UAE</item>-->
+<!--        <item>France</item>-->
+<!--        <item>Bhutan</item>-->
+<!--        <item>Jamica</item>-->
+<!--        <item>Kenya</item>-->
     </array>
 
 </resources>
