@@ -114,6 +114,8 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             }
             case R.id.action_edit:
             {
+                Intent in=new Intent(MainActivity.this,CustomSpinner.class);
+                startActivity(in);
                 Toast.makeText(MainActivity.this,"EDIT",Toast.LENGTH_LONG).show();
                 break;
             }
