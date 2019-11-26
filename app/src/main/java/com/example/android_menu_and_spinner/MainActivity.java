@@ -10,9 +10,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
         Button menu_btn;
     @Override
@@ -24,7 +25,8 @@ public class MainActivity extends AppCompatActivity  {
         menu_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                registerForContextMenu(menu_btn);
+                showMenu(view);
+                //registerForContextMenu(menu_btn);
             }
         });
     }
@@ -84,5 +86,34 @@ public class MainActivity extends AppCompatActivity  {
 
         }
         return super.onContextItemSelected(item);
+    }
+
+
+    public void showMenu(View v){
+        PopupMenu popup = new PopupMenu(this,v);
+        popup.setOnMenuItemClickListener(this);
+        popup.inflate(R.menu.menu_main);
+        popup.show();
+
+    }
+
+
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+            case R.id.action_add:
+            {
+                Toast.makeText(MainActivity.this,"ADD",Toast.LENGTH_LONG).show();
+
+                break;
+            }
+            case R.id.action_edit:
+            {
+                Toast.makeText(MainActivity.this,"EDIT",Toast.LENGTH_LONG).show();
+                break;
+            }
+
+        }
+        return false;
     }
 }
