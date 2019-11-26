@@ -4,8 +4,27 @@
 
     <item
         android:id="@+id/action_add"
-        android:title="Add" />
+        android:icon="@drawable/ic_action_add"
+        android:title="Add"
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_edit"
-        android:title="Edit" />
+        android:icon="@drawable/ic_action_edit"
+        android:title="Edit"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_delete"
+        android:title="Delete"
+        android:icon="@drawable/ic_action_delete">
+
+        <menu>
+            <item android:title="Delete EveryThing"
+                android:id="@+id/action_de"/>
+            <item android:title="Delete Single Item"
+                android:id="@+id/ds"/>
+
+        </menu>
+    </item>
+
+
 </menu>
