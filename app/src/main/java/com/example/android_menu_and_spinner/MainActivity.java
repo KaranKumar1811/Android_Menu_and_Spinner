@@ -3,6 +3,7 @@ package com.example.android_menu_and_spinner;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         switch (item.getItemId()){
             case R.id.action_add:
             {
+
                 Toast.makeText(MainActivity.this,"ADD",Toast.LENGTH_LONG).show();
 
                 break;
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         switch (item.getItemId()){
             case R.id.action_add:
             {
+
                 Toast.makeText(MainActivity.this,"ADD",Toast.LENGTH_LONG).show();
 
                 break;
@@ -103,6 +106,8 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         switch (menuItem.getItemId()){
             case R.id.action_add:
             {
+                Intent intent=new Intent(MainActivity.this,PickerActivity.class);
+                startActivity(intent);
                 Toast.makeText(MainActivity.this,"ADD",Toast.LENGTH_LONG).show();
 
                 break;
